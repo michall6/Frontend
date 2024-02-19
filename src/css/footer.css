@@ -1,0 +1,263 @@
+body{
+    font-family: 'Teko', sans-serif;  
+    }
+    
+    header {
+      position: sticky ;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      min-height: 160px;
+      background: rgba(244, 228, 212, 0.7) ;
+      box-shadow: 0px 10px 13px -7px #000000, 5px 5px 9px 5px rgba(93, 198, 119, 0.44), 5px 5px 9px 5px rgba(127, 148, 73, 0.44);
+    }
+    
+    header .container {
+      min-height: inherit;
+    }
+    
+    header .row {
+      min-height: inherit;
+    }
+    
+    header h1 a {
+    font-family: 'Teko', sans-serif;  
+    color: rgb(116, 135, 67);
+      text-decoration: none;
+      transition: 800ms;
+    }
+    
+    
+    header h1 a:hover {
+      color: rgb(93, 198, 135);
+      text-shadow: 0 -1px 4px #FFF, 0 -2px 10px rgb(0, 217, 255), 0 -10px 20px #2f00ff, 0 -18px 40px rgb(13, 255, 0);
+    
+    }
+    
+    header h1 a .fa {
+      font-size: 1em;
+    }
+    
+    
+    header .nav li {
+      padding: 0 16px;
+      transition: 500ms;
+    
+    }
+    
+    header .nav li:hover {
+      transform: scale(1.4, 1.4);
+    }
+    
+    header .nav a {
+    font-family: 'Teko', sans-serif; 
+     text-decoration: none;
+      color: rgb(116, 135, 67);
+    }
+    
+    header .nav a:hover {
+      color: rgb(67, 135, 86);
+      text-decoration: none;
+    }
+    
+    /* will display the line under the link on mouseover */
+    header .nav a::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 0%;
+      background: #89f6a6;
+      background: -moz-linear-gradient(left, #89f6a6 0%, #658743 100%);
+      background: -webkit-linear-gradient(left, #89f6a6 0%, #658743 100%);
+      background: linear-gradient(to right, #89f6a6 0%, #658743 100%);
+      transition: 1000ms;
+      margin: 0 auto;
+    }
+    
+    header .nav a:hover::after {
+      width: 100%;
+    }
+    
+    
+    header .burger {
+      font-size: 1.5em;
+      display: none;
+      color: rgb(67, 135, 86);
+      cursor: pointer;
+    }
+    
+    footer {
+      box-shadow: 0px 10px 13px -7px #000000, 5px 5px 9px 5px rgba(93, 198, 98, 0.371), 5px 5px 9px 5px rgba(93, 198, 98, 0.371);
+      min-height: 150px;
+      background: rgba(178, 206, 107, 0.608);}
+    
+    footer .lead {
+      color: white;
+    }
+    
+    footer .lead p {
+      font-size: 0.9em;
+    }
+    
+    footer .lead a {
+      font-size: 0.8em;
+      text-decoration: none;
+      color: white;
+      border-right: 1px solid white;
+    }
+    
+    footer .lead a:last-of-type {
+      border-right: none;
+    }
+    
+    footer .lead a:hover {
+      text-decoration: underline;
+      color: rgb(246, 231, 216);
+    }
+    
+    footer h5 {
+      color:  rgb(116, 135, 67);
+    }
+    
+    footer .box3 a {
+      border: none;
+      padding: 0 12px;
+    }
+    
+    footer .box3 a:hover {
+      text-decoration: none;
+    }
+    
+    @media (max-width:768px) {
+    
+      header .nav {
+          min-height: 100vh;
+          display: none;
+          position: absolute;
+          top: 80px;
+          right: 0;
+          width: 40%;
+          padding: 0;
+          background: rgba(44, 152, 87, 0.357);
+          transform: translate(100%, 0);
+          transition: 600ms;
+          z-index: 10;
+          opacity: 0;
+      }
+    
+      header .nav_open {
+          opacity: 80%;
+          transform: translate(0, 0);
+      }
+    
+      header ul {
+          display: block;
+      }
+    
+      header .row li {
+          padding: 12px 0;
+          text-align: center;
+          transition: none;
+      }
+    
+      header .row li:hover {
+          background: rgba(246, 231, 216, 0.686);
+          transform: none;
+          box-shadow: 0px 10px 13px -7px #000000, 5px 5px 9px 5px  rgb(116, 135, 67), 5px 5px 9px 5px rgb(116, 135, 67);;
+      }
+    
+      header .row a {
+          padding: 8px 0;
+          margin: 0 auto;
+          color:  rgb(67, 135, 86);
+      }
+    
+      header .row a:hover {
+          color: rgb(116, 135, 67);
+    
+      }
+    
+      header .nav a:hover::after {
+          width: 35%;
+      }
+    
+      header .burger {
+          display: block;
+      }
+      
+      .hidden-mobile {
+        display: none;
+      }
+    }
+    
+    
+    
+    /* .bg_big {
+      background-position: center;
+      background-size: cover;
+      min-height: 300px;
+    } */
+    
+    .bg_pic {
+      min-height: 800px;
+      background-position: center;
+      background-size: cover;
+    }
+    
+    .header{
+      text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 2px 2px 2px rgba(206, 77, 162, 0);
+      color: rgb(116, 135, 67);
+      font-family: 'Teko', sans-serif;
+    }
+    
+    .carousel-caption {
+      background: rgb(178, 206, 107);
+      max-width: 400px;
+      margin: 0 auto;
+      border-radius: 20px;
+    }
+    
+    main {
+      min-height: 500px;
+      background: rgb(246, 231, 216);
+    }
+    
+    
+    
+    main .lead-img-top {
+      box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      border-radius: 20px;
+    
+    }
+    main .lead-img-top2:hover {
+      box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    
+    }
+    
+    main h2 {
+      text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 2px 2px 2px rgba(206, 77, 162, 0);
+      color:  rgb(116, 135, 67);
+      font-family: 'Teko', sans-serif;
+    }
+    
+    main h5 {
+      font-size: 1.5em;
+      color: rgb(135, 67, 86);
+      font-family: 'Teko', sans-serif;
+        text-shadow: 2px 6px 8px  rgb(116, 135, 67), 2px 6px 8px  rgb(116, 135, 67);
+    
+    }
+    
+    main .lead-text {
+      font-size: 1em;
+    }
+    
+    main a {
+      color: rgb(124, 147, 67);
+      text-decoration: none;
+    }
+    
+    main a:hover {
+      color: rgb(116, 135, 67);
+    
+    }
