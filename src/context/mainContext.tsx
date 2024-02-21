@@ -10,6 +10,9 @@ export interface MainContextType {
    
     searchDone:number;
     setsearchDone:React.Dispatch<React.SetStateAction<number>>;
+    showHistory:boolean;
+    setShowHistory:React.Dispatch<React.SetStateAction<boolean>>;
+
 }
 
 const defaultMainContextValue: MainContextType = {
@@ -21,6 +24,8 @@ const defaultMainContextValue: MainContextType = {
    
     searchDone: 0,
     setsearchDone: () => {},
+    showHistory: false,
+    setShowHistory: () => {},
 };
 
 export const MainContext = createContext<MainContextType>(defaultMainContextValue);

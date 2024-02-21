@@ -3,5 +3,4 @@ export default interface IPost {
     id: string;
     sentiment: string;
     selftext:string;
-    date_created:Date;
 }

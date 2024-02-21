@@ -9,10 +9,10 @@ const Posts: React.FC = (): ReactElement => {
     const { isLoading, posts } = useContext(MainContext);
 
     return (
-        <div className='mx-auto '>
+        <div >
             {isLoading && <Loader />}
             {!isLoading &&
-                <div className='w-75 mx-auto'>
+                <div >
                     {posts && posts.map(post => <PostCard post={post} key={post.id}/>) } <br />
                     {posts && posts.length == 0 && <img src={NoResultFoundImg} />}
                 </div>

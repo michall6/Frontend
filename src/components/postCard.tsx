@@ -15,9 +15,9 @@ const PostCard: React.FC<{ post: IPost }> = ({ post }) => {
         cursor: 'pointer',
         transition: 'background-color 0.3s ease',
     };
-    
 
-    const getSentiment = (sentiment_code: string):void => {
+
+    const getSentiment = (sentiment_code: string): void => {
         switch (sentiment_code) {
             case "POSITIVE":
                 setSentiment("POSITIVE")
@@ -38,46 +38,44 @@ const PostCard: React.FC<{ post: IPost }> = ({ post }) => {
     return (
 
         <main className="container-fluid p-5">
-        <div className="container">
-            <div className="row justify-content-between">
-             <h2 className='text-start fs-5 col-9'>Title : {post.title}</h2>             
-                     <div className="box box1 col-md-4 mb-5" data-aos="fade-up" data-aos-duration="700" >
-                         <div className="card-body">
-                        
-                            <h5 className=" pt-3 mt-3">sentiment:  {post.sentiment}</h5>
-                            <h5 className=" pt-3 mt-3">sentiment:  {sentiment}</h5>
-                            {/* <div className={`${sentimentColor}`}>sentiment: {post.sentiment}       </div>     */}
-                            {/* <p className="card-text my-3 text-secondary lead">{post.selftext}</p> */}
-                                      {displayMore && <>
-                 <div className='text-start'>
-                   <span className=' text-start my-2 '>{post.selftext}</span>
-                  </div>
-             </>}
-             </div>
 
-            <div className=''>
-             <br />
+            <div className="container">
 
-                 {!displayMore && <button style={buttonStyle}
-                     onClick={() => { setdisplayMore(true) }}>
-             <h2><FaInfoCircle /> More Info</h2> 
-              </button>
-             
-             }
-         
+                <div className="row justify-content-between d-flex w-10 ">
 
-                {displayMore && <button style={buttonStyle}
-                     onClick={() => { setdisplayMore(false) }}>
-             <h2><FaInfoCircle /> Less Info</h2> 
-              </button>
-}
+                    <h2 className='text-start fs-5 col-9'>Title : {post.title}</h2>
+                    <div className="box box1 col-md-4 mb-5" data-aos="fade-up" data-aos-duration="700" >
+                        <div className="card-body">
+                            <h5 className='  text-start my-2 '>{post.selftext}</h5>
+                            {displayMore && <>
+                                <div className='text-start'>
+                                    <h5 className=" pt-3 mt-3">Sentiment:  {sentiment}</h5>
+                                </div>
+                            </>}
+                        </div>
+
+                        <br />
+
+                        {!displayMore && <button style={buttonStyle}
+                            onClick={() => { setdisplayMore(true) }}>
+                            <h2><FaInfoCircle /> More Info</h2>
+                        </button>
+
+                        }
+
+
+                        {displayMore && <button style={buttonStyle}
+                            onClick={() => { setdisplayMore(false) }}>
+                            <h2><FaInfoCircle /> Less Info</h2>
+                        </button>
+                        }
+
+                    </div>
+                </div>
 
             </div>
-        </div>
-                            
-                        </div>
-                    </div>
-     </main>
+
+        </main>
 
 
 
@@ -86,4 +84,3 @@ const PostCard: React.FC<{ post: IPost }> = ({ post }) => {
 }
 
 export default PostCard
-

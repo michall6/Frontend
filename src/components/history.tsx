@@ -4,8 +4,8 @@ import IHistory from '../interfaces/IHistory'
 import { MainContext } from '../context/mainContext'
 import Loader from './loader'
 import HistoryCard from './historyCard'
-import Header from './header'
-import Footer from './footer'
+// import Header from './header'
+// import Footer from './footer'
 
 const History: React.FC = (): ReactElement => {
     const [history, sethistory] = useState<IHistory[]>([])
@@ -20,7 +20,7 @@ const History: React.FC = (): ReactElement => {
         cursor: 'pointer',
         transition: 'background-color 0.3s ease',
     };
-    
+
 
     useEffect(() => {
         get_history()
@@ -29,7 +29,7 @@ const History: React.FC = (): ReactElement => {
     const get_history = async (): Promise<void> => {
         try {
             setIsLoading(true)
-            const response = await axios.get(`http://localhost:8000/history/all`);
+            const response = await axios.get(`http://localhost:8000/history/`);
             if (response.status == 200) {
                 sethistory(response.data);
             }
@@ -44,17 +44,18 @@ const History: React.FC = (): ReactElement => {
 
 
     return (
-      <div >
-        <Header/>
-        
-             {isLoading && <Loader />}
+        <div >
+            {/* <Header /> */}
+
+            {isLoading && <Loader />}
             {!isLoading &&
                 <div style={buttonStyle} >{history.map(item => <HistoryCard history={item} key={item.id} />)}</div>}
-      
-        <Footer/>
-      </div>
+            
+            
+             {/* <Footer /> */}
+        </div>
 
-     
+
     )
 }
 
