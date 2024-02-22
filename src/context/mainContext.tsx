@@ -8,8 +8,8 @@ export interface MainContextType {
     isLoading: boolean;
     setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
 
-    showHistory:boolean;
-    setShowHistory:React.Dispatch<React.SetStateAction<boolean>>;
+    displaySearchHistory:boolean;
+    setdisplaySearchHistory:React.Dispatch<React.SetStateAction<boolean>>;
 
 }
 
@@ -21,8 +21,8 @@ const defaultMainContextValue: MainContextType = {
     setIsLoading: () => {},
    
 
-    showHistory: false,
-    setShowHistory: () => {},
+    displaySearchHistory: false,
+    setdisplaySearchHistory: () => {},
 };
 
 export const MainContext = createContext<MainContextType>(defaultMainContextValue);

@@ -12,7 +12,7 @@ import '../css/footer.css'
 const Main: React.FC = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [posts, setPosts] = useState<IPost[]>([]);
-    const [showHistory, setShowHistory] = useState(false);
+    const [displaySearchHistory, setdisplaySearchHistory] = useState(false);
 
 
     const value: MainContextType = {
@@ -22,8 +22,8 @@ const Main: React.FC = () => {
         isLoading: isLoading,
         setIsLoading: setIsLoading,
 
-        showHistory:showHistory,
-        setShowHistory:setShowHistory
+        displaySearchHistory:displaySearchHistory,
+        setdisplaySearchHistory:setdisplaySearchHistory
     }
 
 
@@ -32,12 +32,12 @@ const Main: React.FC = () => {
         <MainContext.Provider value={value}>
             <Header />
             <div >
-            {showHistory && <History />}
+            {displaySearchHistory && <History />}
                 </div>
             <br />
             <br />
             <div >
-            {!showHistory && <Search /> }
+            {!displaySearchHistory && <Search /> }
                 </div>
                      
                     <Posts/>

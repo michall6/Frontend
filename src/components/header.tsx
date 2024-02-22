@@ -7,7 +7,7 @@ import { MainContext } from '../context/mainContext';
 
 const Header: React.FC = () => {
   
-  const { setShowHistory, showHistory } = useContext(MainContext);
+  const { setdisplaySearchHistory, displaySearchHistory } = useContext(MainContext);
 
   const buttonStyle = {
     backgroundColor: ' rgba(178, 206, 107, 0.608)',
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
               <Link to="/main">  <i className="fa fa-plane" aria-hidden="true"></i>
                 Reddit<strong> Post</strong></Link>
               <br />
-                     <button style={buttonStyle} onClick={() => { setShowHistory(!showHistory) }}>
+                     <button style={buttonStyle} onClick={() => { setdisplaySearchHistory(!displaySearchHistory) }}>
                         History
                     </button>
 
