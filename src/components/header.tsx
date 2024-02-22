@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import '../css/footer.css'
-// import { FaInfoCircle } from 'react-icons/fa';
 
 import { Link } from 'react-router-dom';
 import { MainContext } from '../context/mainContext';
@@ -8,6 +7,7 @@ import { MainContext } from '../context/mainContext';
 const Header: React.FC = () => {
   
   const { setShowHistory, showHistory } = useContext(MainContext);
+
   const buttonStyle = {
     backgroundColor: ' rgba(178, 206, 107, 0.608)',
     color: 'white',
@@ -28,10 +28,8 @@ const Header: React.FC = () => {
                 Reddit<strong> Post</strong></Link>
               <br />
                      <button style={buttonStyle} onClick={() => { setShowHistory(!showHistory) }}>
-                        {/* <i className="fas fa-bars text-light fs-3 mx-2"></i> */}
                         History
                     </button>
-                              {/* <Link style={buttonStyle} to="/history"> History</Link> */}
 
             </h1>
           </div>
