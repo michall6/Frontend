@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import '../css/footer.css'
+import '../css/header.css'
+// import '../css/footer.css'
 
 import { Link } from 'react-router-dom';
 import { MainContext } from '../context/mainContext';

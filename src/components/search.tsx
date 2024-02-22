@@ -4,7 +4,7 @@ import { MainContext } from '../context/mainContext';
 import IPost from '../interfaces/IPost';
 
 const Search: React.FC = () => {
-    const { setPosts, searchDone, setIsLoading, setsearchDone } = useContext(MainContext);
+    const { setPosts,  setIsLoading } = useContext(MainContext);
 
     const subredditRef = useRef<HTMLInputElement>(null);
     const categoryRef = useRef<HTMLSelectElement>(null);
@@ -25,14 +25,16 @@ const Search: React.FC = () => {
         setPosts([])
         let allPosts = await getPosts();
         if (allPosts && allPosts.length > 0)
-        setsearchDone(searchDone + 1)
+        // setsearchDone(searchDone + 1)
+        setIsLoading(false);
+
     }
 
     const getPosts = async (): Promise<IPost[]> => {
         setIsLoading(true);
         try {
             const res = await axios.get<IPost[]>(`http://localhost:8000/posts/${subredditRef.current?.value}/${categoryRef.current?.value}`)
-            setIsLoading(false);
+            // setIsLoading(false);
             setPosts(res.data);
             return res.data
         }

@@ -7,9 +7,7 @@ export interface MainContextType {
     
     isLoading: boolean;
     setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
-   
-    searchDone:number;
-    setsearchDone:React.Dispatch<React.SetStateAction<number>>;
+
     showHistory:boolean;
     setShowHistory:React.Dispatch<React.SetStateAction<boolean>>;
 
@@ -22,8 +20,7 @@ const defaultMainContextValue: MainContextType = {
     isLoading: false,
     setIsLoading: () => {},
    
-    searchDone: 0,
-    setsearchDone: () => {},
+
     showHistory: false,
     setShowHistory: () => {},
 };

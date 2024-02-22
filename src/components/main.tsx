@@ -12,7 +12,6 @@ import '../css/footer.css'
 const Main: React.FC = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [posts, setPosts] = useState<IPost[]>([]);
-    const [searchDone, setsearchDone] = useState<number>(0);
     const [showHistory, setShowHistory] = useState(false);
 
 
@@ -23,9 +22,6 @@ const Main: React.FC = () => {
         isLoading: isLoading,
         setIsLoading: setIsLoading,
 
-        searchDone: searchDone,
-        setsearchDone: setsearchDone,
-        
         showHistory:showHistory,
         setShowHistory:setShowHistory
     }
